@@ -1,9 +1,11 @@
 struct Films: Decodable {
-  let count: Int
-  let all: [Film]
-  
-  enum CodingKeys: String, CodingKey {
-    case count
-    case all = "results"
-  }
+    let page, totalResults, totalPages: Int
+    let results: [Film]
+
+    enum CodingKeys: String, CodingKey {
+        case page
+        case totalResults = "total_results"
+        case totalPages = "total_pages"
+        case results
+    }
 }

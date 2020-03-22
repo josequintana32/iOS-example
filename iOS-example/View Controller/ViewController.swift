@@ -10,81 +10,55 @@ import UIKit
 import Alamofire
 
 class ViewController: UITableViewController {
-
+    
     var items: [Displayable] = []
     var films: [Film] = []
     var selectedItem: Displayable?
     
-
-    @IBOutlet weak var searchBar: UISearchBar!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
         fetchFilms()
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
-      }
-      
-      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath)
         let item = items[indexPath.row]
         cell.textLabel?.text = item.titleLabelText
-        cell.detailTextLabel?.text = item.subtitleLabelText
+        cell.detailTextLabel?.text = item.overviewLabelText
         return cell
-      }
-      
-      override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         selectedItem = items[indexPath.row]
         return indexPath
-      }
-      
-      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationVC = segue.destination as? DetailViewController else {
-          return
+            return
         }
         destinationVC.data = selectedItem
-      }
     }
+}
 
-    // MARK: - UISearchBarDelegate
-    extension ViewController: UISearchBarDelegate {
-      func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let shipName = searchBar.text else { return }
-        searchStarships(for: shipName)
-      }
-      
-      func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = nil
-        searchBar.resignFirstResponder()
-        items = films
-        tableView.reloadData()
-      }
-    }
-
-    // MARK: - Alamofire
-    extension ViewController {
-      func fetchFilms() {
-        AF.request("https://swapi.co/api/films").validate().responseDecodable(of: Films.self) { (response) in
-          guard let films = response.value else { return }
-          self.films = films.all
-          self.items = films.all
-          self.tableView.reloadData()
-        }
-      }
-      
-      func searchStarships(for name: String) {
-        let url = "https://swapi.co/api/starships"
-        let parameters: [String: String] = ["search": name]
-        AF.request(url, parameters: parameters).validate()
-          .responseDecodable(of: Starships.self) { response in
-            guard let starships = response.value else { return }
-            self.items = starships.all
+// MARK: - Alamofire
+extension ViewController {
+    func fetchFilms(){
+        AF.request("https://api.themoviedb.org/4/discover/movie?api_key=2d04551872dcb77ef59f9fc4c2161b66").validate().responseDecodable(of: Films.self) { (response) in
+            guard let films = response.value else { return}
+            print("ddde1")
+            self.films = films.results
+            self.items = films.results     
             self.tableView.reloadData()
         }
-      }
+        
+        
+    }
+    
 }
 
 

@@ -12,11 +12,9 @@
 		3B06783F2425A1CB0040C868 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06783E2425A1CB0040C868 /* ViewController.swift */; };
 		3B0678442425A1CC0040C868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0678432425A1CC0040C868 /* Assets.xcassets */; };
 		3B0678472425A1CC0040C868 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0678452425A1CC0040C868 /* LaunchScreen.storyboard */; };
-		3BF53CB02426CBB6005FF854 /* Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53CAB2426CBB6005FF854 /* Starships.swift */; };
 		3BF53CB12426CBB6005FF854 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53CAC2426CBB6005FF854 /* Films.swift */; };
 		3BF53CB22426CBB6005FF854 /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53CAD2426CBB6005FF854 /* Displayable.swift */; };
 		3BF53CB32426CBB6005FF854 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53CAE2426CBB6005FF854 /* Film.swift */; };
-		3BF53CB42426CBB6005FF854 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53CAF2426CBB6005FF854 /* Starship.swift */; };
 		3BF53CBC2426DCD3005FF854 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF53CBB2426DCD3005FF854 /* DetailViewController.swift */; };
 		3BF53CBE2426DEB7005FF854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BF53CBD2426DEB7005FF854 /* Main.storyboard */; };
 		C2CAFF43F8C85107B4E4452B /* Pods_iOS_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4ADBBA18AF570D642B37F25 /* Pods_iOS_example.framework */; };
@@ -30,11 +28,9 @@
 		3B0678432425A1CC0040C868 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B0678462425A1CC0040C868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B0678482425A1CC0040C868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BF53CAB2426CBB6005FF854 /* Starships.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starships.swift; sourceTree = "<group>"; };
 		3BF53CAC2426CBB6005FF854 /* Films.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		3BF53CAD2426CBB6005FF854 /* Displayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
 		3BF53CAE2426CBB6005FF854 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
-		3BF53CAF2426CBB6005FF854 /* Starship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		3BF53CBB2426DCD3005FF854 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3BF53CBD2426DEB7005FF854 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4FEE9F0B8F93326EC1916901 /* Pods-iOS-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-example.release.xcconfig"; path = "Target Support Files/Pods-iOS-example/Pods-iOS-example.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,8 +98,6 @@
 				3BF53CAD2426CBB6005FF854 /* Displayable.swift */,
 				3BF53CAE2426CBB6005FF854 /* Film.swift */,
 				3BF53CAC2426CBB6005FF854 /* Films.swift */,
-				3BF53CAF2426CBB6005FF854 /* Starship.swift */,
-				3BF53CAB2426CBB6005FF854 /* Starships.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -246,9 +240,7 @@
 				3B06783B2425A1CB0040C868 /* AppDelegate.swift in Sources */,
 				3B06783D2425A1CB0040C868 /* SceneDelegate.swift in Sources */,
 				3BF53CB22426CBB6005FF854 /* Displayable.swift in Sources */,
-				3BF53CB02426CBB6005FF854 /* Starships.swift in Sources */,
 				3BF53CB32426CBB6005FF854 /* Film.swift in Sources */,
-				3BF53CB42426CBB6005FF854 /* Starship.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
