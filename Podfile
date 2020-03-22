@@ -7,4 +7,6 @@ target 'iOS-example' do
 
   # Pods for iOS-example
   pod 'Alamofire', '~> 5.0'
+  pod 'Cosmos', '~> 21.0'
+  pod 'Kingfisher', '~> 5.0'
 end
