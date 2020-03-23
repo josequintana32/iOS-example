@@ -38,6 +38,32 @@ extension Film: Displayable {
         overview
     }
     
+    var ratingLabelText: Double {
+        voteAverage
+    }
+    
+    var votesLabelText: Int {
+        voteCount
+    }
+    
+    var releaseLabelText: String {
+        releaseDate
+    }
+    
+    var popularityLabelText: Double {
+        popularity
+    }
+    
+    var posterImage: (label: String, value: String) {
+        ("si", posterPath)
+    }
+    
+    var backdropImage: (label: String, value: String) {
+        let defaultBack = "https://image.freepik.com/free-vector/red-theater-curtain-backdrop-theater-opera-cinema-empty-silk-stage-background-red-scene-realistic-illustration_87720-856.jpg"
+        
+        return ("si", backdropPath ?? defaultBack)
+    }
+    
     var listTitle: String {
         "si"
     }
@@ -45,10 +71,4 @@ extension Film: Displayable {
     var listItems: [Int] {
         genreIDS
     }
-    
-    var item1: (label: String, value: String) {
-        ("si", posterPath)
-    }
-    
-    
 }
